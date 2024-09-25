@@ -40,7 +40,17 @@ const checkWin = () => {
             document.querySelector(".line").style.transform = `translate(${e[3]}vw, ${e[4]}vh) rotate(${e[5]}deg)`;
             document.querySelector(".line").style.width = "15vw";
         }
-    })
+    });
+
+    // Check for a draw if there is no winner
+    if (!isGameOver) {
+        let filledBoxes = Array.from(boxText).every(box => box.innerText !== "");
+        if (filledBoxes) {
+            document.querySelector(".info").innerText = "It's a Draw!";
+            gameOver.play(); // Play the game over sound for a draw
+            isGameOver = true;
+        }
+    }
 }
 
 // Game Logic
