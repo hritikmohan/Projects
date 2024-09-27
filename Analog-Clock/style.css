@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#clock-container{
+    position: relative;
+    margin: auto;
+    margin-top: 4rem;
+    /* border: 2px solid #000; */
+    height: 40vw;
+    width: 40vw;
+    background: url(clock.png) no-repeat;
+    background-size: contain;
+}
+
+#hour, #minute, #second{
+    position: absolute;
+    background: black;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour{
+    width: 1.6%;
+    height: 27%;
+    top: 23%;
+    left: 49.2%;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+#minute{
+    width: 1.6%;
+    height: 35%;
+    top: 15%;
+    left: 49.2%;
+    opacity: 0.8;
+}
+
+#second{
+    width: 1%;
+    height: 40%;
+    top: 10%;
+    left: 49.6%;
+    opacity: 0.8;
+    /* display: none; */
+}
+
+#digital-clock{
+    font: 5rem "Orbitron", sans-serif;
+    text-align: center; /* Center text horizontally */
+    margin: 2rem auto;  /* Center the div horizontally and add some margin */
+    width: 100%; /* Ensure the clock spans the full width */
+}
